@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <!-- 제이쿼리 -->
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <!-- 폰트어썸 -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     <link rel="stylesheet" href="../style.css">
@@ -540,12 +542,12 @@
 
     <script>
         $('.dropBtn').click(function() {
-            var dropDownContent = $('.dropdown_content')
+            var dropDownContent = $('.dropdown_content');
 
             if (dropDownContent.hasClass('is_active')) {
-                dropDownContent.removeClass('is_active')
+                dropDownContent.removeClass('is_active');
             } else {
-                dropDownContent.addClass('is_active')
+                dropDownContent.addClass('is_active');
             }
         });
 
