@@ -272,6 +272,15 @@
             <div class="dropdown flex-as-c">
                 <button class="dropBtn">
                     <span>관련사이트</span>
+                    
+                    <div class="dropdown_content">
+                        <ul>
+                            <li><a href="#"><span>카카오뱅크 AD</span></a></li>
+                            <li><a href="#"><span>카카오뱅크 인증서</span></a></li>
+                            <li><a href="#"><span>금융기술연구소</span></a></li>
+                            <li><a href="#"><span>기술블로그</span></a></li>
+                        </ul>
+                    </div>
                     <span class="ico"><i class="fa-solid fa-angle-down"></i></span>
                 </button>
             </div>
@@ -379,6 +388,10 @@
             position: relative;
         }
 
+        header .menu_box a:hover {
+            text-decoration: underline;
+        }
+
         header .menu_box > ul > li > a:hover::after {
             content: "";
             position: absolute;
@@ -398,13 +411,14 @@
 
         header .menu_box > ul > li > div {
             width: 100%;
-            height: 200px;
             background-color: #fff;
             position: absolute;
             left: 0;
             top: 100%;
             display: none;
             padding: 60px 0 36px;
+            box-shadow: 0 4px 12px 0 rgba(0,0,0,0.12);
+            border-top: 1px solid rgba(0,0,0,0.1);
         }
 
         header .menu_box > ul > li:hover > div {
@@ -435,6 +449,43 @@
         }
 
         /* dropdown menu */
+        header .dropdown {
+            position: relative;
+        }
+        
+        header .dropdown .dropdown_content {
+            position: absolute;
+            left: 0;
+            top: 100%;
+            border-radius: 6px;
+            background-color: #fff;
+            margin-top: 0;
+            margin-top: 32px;
+            width: 240px;
+            text-align: left;
+            line-height: 48px;
+            box-shadow: 0 4px 12px 0 rgba(0,0,0,0.12);
+            left: 50%;
+            transform: translateX(-50%);
+            visibility: hidden;
+            opacity: 0;
+        }
+
+        header .dropdown .dropdown_content.is_active {
+            visibility: visible;
+            opacity: 1;
+        }
+
+        header .dropdown .dropdown_content a {
+            display: block;
+            padding: 0 24px;
+            box-sizing: border-box;
+        }
+
+        header .dropdown .dropdown_content a:hover {
+            text-decoration: underline;
+        }
+        
         header .dropdown .dropBtn {
             background: rgba(244, 244, 244, 0.8);
             color: rgba(68, 68, 68, 1);
