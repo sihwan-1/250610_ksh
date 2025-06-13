@@ -20,7 +20,6 @@
                 </a>
             </div>
         
-
             <div class="flex-grow-1"></div>
 
             <nav class="menu_box">
@@ -286,6 +285,12 @@
                     <span class="ico"><i class="fa-solid fa-angle-down"></i></span>
                 </button>
             </div>
+
+            <div class="flex-as-c">
+                <a href="#" class="global_log">
+                    <img src="../imgs/KKB/icon_eng.svg" alt="">
+                </a>
+            </div>
         </div>
     </header>
 
@@ -490,6 +495,7 @@
             transform: translateX(-50%);
             visibility: hidden;
             opacity: 0;
+            transition: all 0.3s;
         }
 
         header .dropdown .dropdown_content.is_active {
@@ -519,6 +525,7 @@
             margin-top: -3px;
             vertical-align: middle;
         }
+
         
         header .dropdown .dropBtn {
             background: rgba(244, 244, 244, 0.8);
@@ -535,6 +542,26 @@
         header .dropdown .dropBtn .ico {
             display: inline-block;
             margin-left: 5px;
+            transition: transform 0.3s;
+        }
+
+        header .dropdown .dropdown_content.is_active + .ico {
+            transform: rotate(-180deg);   
+        }
+
+        /* -----------글로벌 로고-------- */
+        header .global_log {
+            display: inline-block;
+            width: 20px;
+        }
+
+        header .global_log > img {
+            width: 100%;
+            display: block;
+        }
+
+        header .global_log:hover > img {
+            opacity: 0.4;
         }
 
         /* ------------------헤더 끝------------------ */
@@ -548,6 +575,12 @@
                 dropDownContent.removeClass('is_active');
             } else {
                 dropDownContent.addClass('is_active');
+            }
+        });
+
+        $(window).click(function(event) {
+            if (!$(event.target).closest('.dropBtn').length) {
+                $('.dropdown_content').removeClass('is_active');
             }
         });
 
