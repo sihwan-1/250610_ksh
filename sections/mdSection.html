@@ -18,7 +18,7 @@
 </head>
 <body>
   <!-- ((section.md_sec.md_sec_$.con>div*2)+div.md_divider)*5 -->
-  <section class="md_sec md_sec_1 con">More actions
+  <section class="md_sec md_sec_1 con">
     <div>
       <div class="img-box">
         <img src="../imgs/KKB/main-withdrawal.png" alt="">
@@ -406,11 +406,11 @@
   }
 
   .md_sec_5 > div:first-child > * {
-  margin-left: 80px;
+  margin-left: 76px;
 }
 
   .md_sec_5 > div:last-child > * {
-  margin-left: -10px;
+  margin-left: -18px;
   }
 
   .md_sec_5_wrap {
@@ -420,6 +420,19 @@
   .md_sec_5 .img-box {
     width: 408px;
   }
+
+  .md_sec_5 .img-box > img {
+      transform: translateY(20%);
+      visibility: hidden;
+      opacity: 0;
+      transition: all, transform 1.4s cubic-bezier(0.6, 0.2, 0.1, 1) 0.5s, opacity 1.4s cubic-bezier(0.6, 0.2, 0.1, 1) 0.5s;
+    }
+
+    .md_sec_5 .img-box.active > img {
+      transform: translateY(0);
+      visibility: visible;
+      opacity: 1;
+    }
   /* 섹션 5 끝 */
 
   /* 중간섹션 1 ~ 5 끝 */
