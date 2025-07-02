@@ -158,7 +158,7 @@ header .menu_box .menu_box-sec_menu ul li a[target="_blank"]::after {
     content: "";
     width: 14px;
     height: 14px;
-    background: url(../imgs/KKB/svg_line_outlink.svg);
+    background: url(./imgs/KKB/svg_line_outlink.svg);
     background-size: 14px 14px;
     display: inline-block;
     margin-left: 8px;
@@ -224,7 +224,7 @@ header .dropdown .dropdown_content a[target="_blank"]::after {
     content: "";
     width: 12px;
     height: 12px;
-    background: url(../imgs/KKB/svg_line_outlink.svg);
+    background: url(./imgs/KKB/svg_line_outlink.svg);
     background-size: 12px 12px;
     display: inline-block;
     margin-left: 8px;
@@ -370,8 +370,7 @@ header .global_log:hover > img {
 
 .md_divider {
     height: 32px;
-    /* background-color: #fafafa; */
-    background-color: lightgray;
+    background-color: #fafafa;
 }
 /* 공통섹션 끝 */
 .md_sec .text_box h3 {
@@ -568,6 +567,7 @@ header .global_log:hover > img {
     position: absolute;
     top: 202px;
     left: calc(50% + 450px);
+    overflow: hidden;
 }
 
 .loan_box > .sky > .moon > .base {
@@ -585,18 +585,17 @@ header .global_log:hover > img {
 .loan_box > .sky > .moon > .shadow {
     width: 100%;
     height: 100%;
-    background-color: #559cde;
+    background-color: #333b58;
     position: absolute;
     top: -100%;
     left: -100%;
     border-radius: 50%;
-    transition: top 0.85s 0.2s, left 0.85s 0.2s, background-color 0.95s 0.1s;
+    transition: top 0.85s 0.3s, left 0.85s 0.3s;
 }
 
 .loan_box.active > .sky > .moon > .shadow {
     top: -22%;
     left: -22%;
-    background-color: #333b58;
 }
 
 /* 대출 - 별 시작 */
@@ -743,6 +742,8 @@ header .global_log:hover > img {
 /* 체크카드 시작 */
 .checkcard_box {
     padding-top: 150px;
+    height: 1062px;
+    box-sizing: border-box;
 }
 
 .checkcard_box h3 {
